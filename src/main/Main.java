@@ -20,7 +20,7 @@ import utils.Date;
 import utils.Fonts;
 import utils.Images;
 
-//tstrickltest commit
+//whooshy commit
 
 public class Main implements Runnable, KeyListener, MouseListener, MouseMotionListener
 {
