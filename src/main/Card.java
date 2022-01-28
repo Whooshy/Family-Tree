@@ -68,7 +68,7 @@ public class Card
 			y = (int) Main.translatedMouseY + offsetY;
 		}
 		else if(Main.lmbClicked && !mouseHovering()) enlarged = false;
-		
+//		testing
 		if(enlarged)
 		{
 			g.setColor(Color.DARK_GRAY);
