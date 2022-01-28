@@ -69,6 +69,9 @@ public class Card
 		}
 		else if(Main.lmbClicked && !mouseHovering()) enlarged = false;
 //		testing
+
+
+
 		if(enlarged)
 		{
 			g.setColor(Color.DARK_GRAY);
