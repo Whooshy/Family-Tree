@@ -17,10 +17,9 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import utils.Date;
+import utils.Dropdown;
 import utils.Fonts;
 import utils.Images;
-
-//whooshy commit
 
 public class Main implements Runnable, KeyListener, MouseListener, MouseMotionListener
 {
@@ -45,6 +44,8 @@ public class Main implements Runnable, KeyListener, MouseListener, MouseMotionLi
 	
 	Fonts fonts;
 	Images imgs;
+	
+	Dropdown dd;
 	
 	public Main()
 	{
@@ -73,6 +74,14 @@ public class Main implements Runnable, KeyListener, MouseListener, MouseMotionLi
 		
 		fonts = new Fonts();
 		imgs = new Images();
+		dd = new Dropdown();
+		
+		String[] options = new String[2];
+		options[0] = "Add new member";
+		options[1] = "Tree options";
+		int[] separators = new int[1];
+		separators[0] = 0;
+		dd.setConfig(options, separators);
 		
 		exampleCard = new Card("John Doe", 0, 0, new Date(1, 1, 1990), new Date(17, 6, 2019), false);
 		exampleCard.setIcon(Images.johndoe_icon);
@@ -202,6 +211,7 @@ public class Main implements Runnable, KeyListener, MouseListener, MouseMotionLi
 		}
 		
 		exampleCard.draw(g);
+		dd.draw(g);
 		
 		g.dispose();
 		bs.show();
